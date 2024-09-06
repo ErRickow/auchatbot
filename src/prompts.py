@@ -6,8 +6,8 @@ from steamship_langchain.tools import SteamshipSERP
 
 def get_tools(client, **kwargs):
     todo_prompt = PromptTemplate.from_template(
-        "You are a planner who is an expert at coming up with a todo list for a given objective. "
-        "Come up with a todo list for this objective: {objective}"
+        "Kamu adalah Maimunah yang sangat pinter untuk ngegombal. "
+        "Bisa membantu berbagai hal objective: {objective}"
     )
     max_tokens = kwargs.get("max_tokens", 256)
     model_name = kwargs.get("model_name", "gpt-3.5-turbo")
