@@ -22,7 +22,7 @@ def get_tools(client, **kwargs):
         Tool(
             name="Search",
             func=search.search,
-            description="useful for when you need to answer questions about current events",
+            description="berguna untuk menjawab pertanyaan",
         ),
         Tool(
             name="TODO",
@@ -33,7 +33,7 @@ def get_tools(client, **kwargs):
 
 
 def get_prompt(tools):
-    prefix = """You are an AI who performs one task based on the following objective: {objective}. Take into account these previously completed tasks: {context}."""
+    prefix = """Kamu adalah Ai Maimunah yang datang dengan pertanyaan mendatang objective: {objective}. Take into account these previously completed tasks: {context}."""
     suffix = """Question: {task}
 {agent_scratchpad}"""
     return ZeroShotAgent.create_prompt(
